@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--text-primary);
+}
+
+:root {
+  --red-primary: #e53c3c;
+  --black-secondry: #1e1e1e;
+  --accent: #4c9ebc;
+  --text-primary: #fff0f0;
+  --text-secondry: #fff0f0df;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+body:has(#loader){
+  overflow: hidden;
+}
+
+#main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black-secondry);
+}
+
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--red-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+#loader-container {
+  width: 95%;
+  height: 100%;
+}
+
+#loader-part1 {
+  position: relative;
+  height: 25%;
+  width: 100%;
+}
+
+#loader-part1 h2 {
+  text-transform: uppercase;
+  padding: 0 0 0 2vw;
+  font-size: 10vw;
+  letter-spacing: -11px;
+  align-self: last baseline;
+  overflow: hidden;
+  margin: 0;
+}
+
+#loader-part1 img {
+  position: absolute;
+  height: 45vw;
+  left: 0;
+  top: 5vw;
+  transform: rotate(60deg);
+  z-index: 10;
+}
+
+#loader-part2 {
+  display: flex;
+  height: 75%;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 4vw;
+}
+
+#loader-part2-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+  width: 70%;
+  height: 90%;
+  border-radius: 3vw;
+  box-shadow: 18px 18px 30px #1e1e1e66;
+  background-color: var(--black-secondry);
+}
+
+#loader-part2-container h1 {
+  font-size: 8vw;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+}
+
+#loader-part2 img {
+  position: absolute;
+  height: 35vw;
+  right: -4vw;
+  rotate: -65deg;
+  mix-blend-mode: color-dodge;
+  z-index: 10;
+}
+
+#main-page {
+  width: 95%;
+  min-height: 100vh;
+}
+
+#hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  /* padding: 20px 0; */
+
+  h1 {
+    text-align: center;
+    letter-spacing: -10px;
+    font-size: 15vw;
+    line-height: 0.9;
+    width: 100%;
+    word-spacing: -30px;
+    /* word-spacing: -70px; */
+  }
+
+  h2 {
+    color: var(--text-secondry);
+    text-align: center;
+    font-size: 3vw;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-color: #4c9ebc;
+  }
+
+  #hero-img {
+    height: 40%;
+    background-position: center;
+    border-radius: 0 0 60px 60px;
+    background-size: cover;
+    width: 100%;
+    background-image: url(https://images.pexels.com/photos/9895319/pexels-photo-9895319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  }
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+  flex-direction: column;
+  align-items: end;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "- ";
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#about-section{
+    background-color: var(--red-primary);
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+#about-wrapper{
+  padding-top: 12px;
+  width: 93%;
+  display: flex;
+  font-family: 'Lexend Deca', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  
+  h4{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 120px;
+  }
+}
