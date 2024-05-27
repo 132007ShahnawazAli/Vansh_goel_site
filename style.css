@@ -33,6 +33,7 @@ body:has(#loader){
   display: flex;
   justify-content: center;
   background-color: var(--black-secondry);
+  z-index: 10;
 }
 
 #loader {
@@ -194,28 +195,23 @@ nav ul li a:hover::after {
   transform-origin: bottom left;
 }
 
-#about-section{
-    background-color: var(--red-primary);
-    border-radius: 50px 50px 0 0;
-    display: flex;
-    justify-content: center;
-}
+@media (max-width: 450px){
+  #loader-part1 img{
+    top: 30vw;
+  }
+  #loader-part1 h2{
+    letter-spacing: -0.5vw;
+    padding-top: 5vh;
+  }
 
-#about-wrapper{
-  padding-top: 12px;
-  width: 93%;
-  display: flex;
-  font-family: 'Lexend Deca', sans-serif;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  
-  h4{
-    font-size: 30px;
-    text-align: center;
-    font-weight: 300;
-    width: fit-content;
-    text-transform: uppercase;
-    letter-spacing: 120px;
+  #loader-part2{
+    justify-content: center;
+  }
+  #loader-part2-container{
+    width: 100%;
+  }
+  #loader-part2-container h1{
+    letter-spacing: -.5vw;
+    font-size: 11vw;
   }
 }
