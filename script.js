@@ -38,7 +38,7 @@ function animateLoaderWords() {
     gsap.from(chars, {
       yPercent: 100,
       stagger: 0.02,
-      duration: 1.8,
+      duration: 1,
       ease: "power4.out",
       onComplete: () => {
         if (split) {
